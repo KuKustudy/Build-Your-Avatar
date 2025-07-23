@@ -8,6 +8,7 @@ import * as fabric from 'fabric';
 import {Button} from 'blocksin-system';
 import IconButton from "blocksin-system/dist/IconButton";
 import {SquareIcon, CircleIcon, DownloadIcon} from "sebikostudio-icons";
+ import './tailwindoutput.css';
 
 
 function svgStringToFabricPaths(svgString) {
@@ -67,6 +68,7 @@ function App() {
       return () => {
         initCanvas.dispose(); // free the canva object after user left the page
       };
+
     }
   },[])
 
@@ -140,6 +142,7 @@ function App() {
     } 
   }
 
+  // export canva as png
   const handleExport = () => {
     if (canvas) {
       // set color of background to be white
@@ -156,10 +159,34 @@ function App() {
     }
   };
 
+
+  // handle delete
+  const handleDelete = () => {
+    if (canvas) {
+      const activeObject = canvas.getActiveObject();
+      if (activeObject) {
+        canvas.remove(activeObject);
+        canvas.discardActiveObject();
+        canvas.requestRenderAll();
+      }
+    }
+  };
+  // monitor to detect whether user has pressed delete button when selecting an object
+  useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Delete' || e.key === 'Backspace') {
+      handleDelete();
+    }
+  };
+  window.addEventListener('keydown', handleKeyDown);
+  return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [canvas]);
+
   return (
     <div className="App">
       
-      <div className="Toolbar darkmode">
+      <h1 class="text-3xl font-bold top-8 left-8 mb-16 text-white">✨Set Your Avatar✨</h1>
+      <div class="flex flex-col gap-2 bg-[var(--background-neutral-container)] p-2 rounded fixed top-1/2 left-4 transform -translate-y-1/2 empty:hidden">
         <IconButton onClick={addRectangle} variant="ghost" size="medium">
           <SquareIcon/>
         </IconButton>
