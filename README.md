@@ -75,4 +75,3 @@ https://www.youtube.com/watch?v=eOd1RYjZXxg
 
 ### how to add a side menu bar with expandable sub menu items using React
 https://www.youtube.com/watch?v=MszSqhEw__8
-<img width="468" height="646" alt="image" src="https://github.com/user-attachments/assets/6061dc4d-dd0f-4912-9ff7-504f7f932a15" />
