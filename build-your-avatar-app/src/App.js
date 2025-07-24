@@ -1,8 +1,9 @@
-import {Canvas, bringObjectToFront} from 'fabric';
-import {useState, useRef, useEffect} from 'react';
+import {Canvas} from 'fabric';
+import {useState, useRef, useEffect, useCallback} from 'react';
+import React from 'react';
 import IconButton from "blocksin-system/dist/IconButton";
 import {DownloadIcon, ArrowLeftIcon, HeartIcon, DoubleArrowDownIcon} from "sebikostudio-icons";
-import { getMenus} from "./AvatarHelper";
+import {getMenus} from "./AvatarHelper";
 import './tailwindoutput.css';
 
 
@@ -40,7 +41,7 @@ function App() {
   },[])
 
 
-  // export canva as png
+  // handle exportation, export canva as png
   const handleExport = () => {
     if (canvas) {
       // set color of background to be white
@@ -58,8 +59,8 @@ function App() {
   };
 
 
-  // handle delete
-  const handleDelete = () => {
+  // handle deletion of object
+  const handleDelete = useCallback(() => {
     if (canvas) {
       const activeObject = canvas.getActiveObject();
       if (activeObject) {
@@ -68,7 +69,7 @@ function App() {
         canvas.requestRenderAll();
       }
     }
-  };
+  }, [canvas]);
 
   // monitor to detect whether user has pressed delete button when selecting an object
   useEffect(() => {
@@ -79,28 +80,8 @@ function App() {
   };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [canvas]);
+  }, [handleDelete]);
 
-
-
-  // canvas.on('selection:created', (e) => {
-  //   console.log('Selection created:', e.selected); // array of selected objects
-  // });
-
-  // useEffect(() => {
-  //   if (!canvas) return; // wait for canvas to be ready
-
-  //   function onObjectSelected(e) {
-  //     console.log(e.target.get('type'));
-  //   }
-
-  //   canvas.on('object:selected', onObjectSelected);
-
-  //   // Cleanup on unmount or canvas change
-  //   return () => {
-  //     canvas.off('object:selected', onObjectSelected);
-  //   };
-  // }, [canvas]);
 
 
   return (
@@ -126,7 +107,7 @@ function App() {
             {/* list of menu items: face, facial expression, decorations*/}
             <ul class="pt-4">
             {Menus.map((menu, index) => (
-              <>
+              <React.Fragment key={`menu-fragment-${index}`}>
                 {/* display menu items' icon, and text and open/close button*/}
                 <li key={index} class="bg-green-200 opacity-75 text-stone-800 text-sm flex items-center gap-x-4 
                 cursor-pointer p-2 hover:bg-green-500 
@@ -142,9 +123,9 @@ function App() {
                 {/* display menu items' submenu items' text*/}
                 {menu.submenu && submenuOpen && open &&(
                   <ul>
-                    {menu.submenuItems.map((submenuItem, index) => (
+                    {menu.submenuItems.map((submenuItem, subIndex) => (
                       <li 
-                        key={index} 
+                        key={`submenu-${submenuItem.title}-${subIndex}`}
                         onClick={submenuItem.effect}
                         class="bg-green-100 opacity-75 text-stone-800 text-sm flex items-center gap-x-4 
                               cursor-pointer px-5 p-2 hover:bg-green-300 rounded-md mt-2"> 
@@ -156,7 +137,7 @@ function App() {
                   </ul>
                 )}
                 
-              </>
+              </React.Fragment>
             ))}
           </ul>
 
