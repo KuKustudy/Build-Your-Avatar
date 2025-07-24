@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Build-Your-Avatar/static/css/main.82e0f1cd.css",
+    "main.js": "/Build-Your-Avatar/static/js/main.e0d85881.js",
+    "static/js/453.14ac0c91.chunk.js": "/Build-Your-Avatar/static/js/453.14ac0c91.chunk.js",
+    "index.html": "/Build-Your-Avatar/index.html",
+    "main.82e0f1cd.css.map": "/Build-Your-Avatar/static/css/main.82e0f1cd.css.map",
+    "main.e0d85881.js.map": "/Build-Your-Avatar/static/js/main.e0d85881.js.map",
+    "453.14ac0c91.chunk.js.map": "/Build-Your-Avatar/static/js/453.14ac0c91.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82e0f1cd.css",
+    "static/js/main.e0d85881.js"
+  ]
+}
