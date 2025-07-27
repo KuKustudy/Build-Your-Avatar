@@ -7,7 +7,7 @@ import * as fabric from 'fabric';
 
 // just bunch of icons
 import { LuCat, LuBone, LuSmile } from 'react-icons/lu';
-import { FaRegFaceFlushed, FaRegSquare, FaAppleWhole } from "react-icons/fa6";
+import { FaRegFaceFlushed, FaRegSquare, FaAppleWhole, FaRegHeart } from "react-icons/fa6";
 import { FaHatCowboy, FaRegSmileWink} from "react-icons/fa";
 import { RiBearSmileLine } from "react-icons/ri";
 import { BiCake } from "react-icons/bi";
@@ -275,7 +275,56 @@ var svgStringDict = {
        id="path6" />
   </g>
               </svg>`,
-
+    "pinkheart": `<svg
+   version="1.1"
+   id="svg1"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   sodipodi:docname="pinkheart.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7148438"
+     inkscape:cx="281.36674"
+     inkscape:cy="245.79499"
+     inkscape:window-width="1472"
+     inkscape:window-height="920"
+     inkscape:window-x="0"
+     inkscape:window-y="160"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:#ffd7e9;fill-opacity:1"
+       d="m 185.7613,168.64899 h 7.83455 v -8.24689 l 23.50365,0.20617 -0.20617,8.2469 h 8.65924 v 8.65924 l 15.46292,-0.61852 0.41235,7.83455 h 16.08144 l -0.20617,-7.83455 8.2469,-0.20617 -0.41235,-8.2469 8.65924,0.20617 -0.41234,-7.21603 23.70982,-0.41234 0.20617,8.24689 h 15.46293 l 0.20617,7.62838 h 8.24689 l -0.20617,16.90613 8.04072,-0.20617 0.41235,32.16289 -8.86541,-0.41235 v 7.62838 l -8.04073,-0.61852 0.61852,8.45307 h -8.04072 l -0.20617,8.04072 -8.65924,0.20618 0.20617,15.87527 -7.4222,-0.41235 -0.20618,8.04073 -15.6691,0.20617 0.41235,8.45307 -8.45307,-0.61852 0.20617,8.04072 -8.45306,0.20617 v 7.62838 l -15.46293,-0.20617 v -8.2469 l -8.2469,0.20618 v -7.62838 l -7.62837,-0.20617 -0.20618,-7.83455 -16.28761,-0.41235 v -7.4222 l -8.04072,0.20617 0.20617,-9.07159 -7.42221,-0.20617 v -7.00986 l -7.83455,0.20617 -0.20617,-8.65924 h -8.45307 v -16.49378 h -8.04072 l -0.20617,-31.13203 9.07158,0.61852 0.20618,-16.49379 h 8.04072 z"
+       id="path1" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       d="m 289.25983,177.10206 0.20617,15.05058 16.28762,0.41235 -0.82469,-15.46293 z"
+       id="path2" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       d="m 296.88821,208.23409 0.41234,24.12216 8.45307,-0.20617 -0.61852,-24.12216 z"
+       id="path3" />
+  </g>
+              </svg>`,
 }
 // a function that convert SVG string to fabric paths
 // this is essentiall to add the customised object like blue hat
@@ -406,6 +455,11 @@ export function getMenus(canvas) {
           title: "apple",
           effect: () => addCustomisedShape(canvas, "apple"),
           icon: <FaAppleWhole color="#CD5C5C"/>,
+        },
+        {
+          title: "pink heart",
+          effect: () => addCustomisedShape(canvas, "pinkheart"),
+          icon: <FaRegHeart color="#ffd7e9"/>,
         },
       ],
     },
