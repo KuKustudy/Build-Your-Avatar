@@ -3,7 +3,7 @@
 This web app is a simple avatar making tool that can help you build your own avatar by clicking and dragging pieces together! The objects can be moved around, resized, grouped, and rearranged. Have fun playing around with it!
 
 This one-page application used React, Fabric.js, and tailwind css as frontend.
-This web app is now deployed using GitHub Pages, and serving at 🍕🍕 [https://kukustudy.github.io/Set-Your-Colors/](https://kukustudy.github.io/Build-Your-Avatar/)
+This web app is now deployed using GitHub Pages, and serving at 🍕🍕 [https://kukustudy.github.io/Build-Your-Avatar/](https://kukustudy.github.io/Build-Your-Avatar/)
 
 
 ## What the running app looks like:
