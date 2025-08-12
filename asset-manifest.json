@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Build-Your-Avatar/static/css/main.8efbb2be.css",
-    "main.js": "/Build-Your-Avatar/static/js/main.9e22a185.js",
+    "main.css": "/Build-Your-Avatar/static/css/main.e95ac185.css",
+    "main.js": "/Build-Your-Avatar/static/js/main.e1a5340c.js",
     "static/js/453.14ac0c91.chunk.js": "/Build-Your-Avatar/static/js/453.14ac0c91.chunk.js",
     "index.html": "/Build-Your-Avatar/index.html",
-    "main.8efbb2be.css.map": "/Build-Your-Avatar/static/css/main.8efbb2be.css.map",
-    "main.9e22a185.js.map": "/Build-Your-Avatar/static/js/main.9e22a185.js.map",
+    "main.e95ac185.css.map": "/Build-Your-Avatar/static/css/main.e95ac185.css.map",
+    "main.e1a5340c.js.map": "/Build-Your-Avatar/static/js/main.e1a5340c.js.map",
     "453.14ac0c91.chunk.js.map": "/Build-Your-Avatar/static/js/453.14ac0c91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8efbb2be.css",
-    "static/js/main.9e22a185.js"
+    "static/css/main.e95ac185.css",
+    "static/js/main.e1a5340c.js"
   ]
 }
