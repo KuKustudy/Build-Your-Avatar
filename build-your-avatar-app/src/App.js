@@ -86,7 +86,7 @@ function App() {
 
   return (
     /* the app container */
-    <div class="font-sans justify-center bg-stone-200/75 min-h-screen h-full">
+    <div class="font-sans justify-center bg-stone-200/75 min-h-screen">
       
      {/* the menubar + title + canva wrapper + buttons */}
       <div class="flex w-full">
@@ -94,7 +94,7 @@ function App() {
         {/* the side menu*/}
         <div class="flex">
           
-          <div class={`bg-yellow-50 h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
+          <div class={`bg-yellow-50 min-h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
 
             {/* the side menu open/close button */}
             <ArrowLeftIcon class={`bg-yellow-50 text-yellow-900 rounded-full h-10 w-10 absolute -right-3 
@@ -105,7 +105,7 @@ function App() {
             <h3 class={`text-3xl pt-3 mb-6 ${!open && "hidden"}`}>Hi, Artist!</h3>
 
             {/* list of menu items: face, facial expression, decorations*/}
-            <ul class="pt-4">
+            <ul class="pt-4 mb-8">
             {Menus.map((menu, index) => (
               <React.Fragment key={`menu-fragment-${index}`}>
                 {/* display menu items' icon, and text and open/close button*/}
