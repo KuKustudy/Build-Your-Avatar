@@ -7,7 +7,7 @@ import * as fabric from 'fabric';
 
 
 // just bunch of icons
-import { LuCat, LuBone, LuSmile} from 'react-icons/lu';
+import { LuCat, LuBone, LuSmile, LuEye} from 'react-icons/lu';
 import { FaRegFaceFlushed, FaRegSquare, FaAppleWhole, FaRegHeart, FaCat, FaDog, FaGuitar } from "react-icons/fa6";
 import { FaHatCowboy, FaRegSmileWink} from "react-icons/fa";
 import { RiBearSmileLine } from "react-icons/ri";
@@ -847,6 +847,33 @@ var svgStringDict = {
        style="fill:#762322;fill-opacity:1;stroke-width:0.354368"
        d="m 272.2958,229.18779 0.14338,3.87112 h 2.72412 l 0.14337,-4.15787 z"
        id="path28" /></g></svg>`,
+    "catstare":`<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="layer1"
+     transform="matrix(2.8219256,0,0,2.8219256,-498.53472,-371.6274)"><path
+       style="fill:#000000;stroke-width:0.354368;fill-opacity:1"
+       d="m 240.60994,214.2768 0.28676,11.46999 13.19049,-0.86025 -0.5735,-11.46999 z"
+       id="path1" /><path
+       style="fill:#000000;stroke-width:0.354368;fill-opacity:1"
+       d="m 279.32117,213.99004 0.5735,9.7495 h 13.76399 l -0.57349,-10.8965 z"
+       id="path2" /><path
+       style="fill:#000000;stroke-width:0.354368;fill-opacity:1"
+       d="m 264.98368,241.51803 -3.441,-0.28675 0.5735,-6.882 10.60975,0.5735 v 6.02175 h -4.588 l 0.28675,4.0145 1.7205,0.28675 v 2.294 l 2.8675,-0.28675 v -2.58075 h 1.43374 l 0.57351,-3.72775 4.30124,-0.28675 v 2.8675 h -2.8675 l -1.147,3.44099 -0.57349,3.15426 -8.029,-0.28676 h -6.59525 l -2.86749,-4.87474 h -2.58075 v -3.441 h 3.44099 l 3.72775,5.44824 h 4.30125 z"
+       id="path3" /><path
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.354368"
+       d="m 248.56725,217.07261 -0.0717,2.93918 2.65244,-0.43012 -0.21506,-3.15425 z"
+       id="path4" /><path
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.354368"
+       d="m 287.17043,216.04215 0.20276,2.43315 3.04145,-0.20276 -0.40553,-2.63592 z"
+       id="path5" /></g></svg>`,
 }
 
 
@@ -964,11 +991,11 @@ export function getMenus(canvas) {
           effect: () => addCustomisedShape(canvas, "bearsmile"),
           icon: <FaRegSmileWink />,
         },
-        // {
-        //   title: "Watch you forever",
-        //   effect: () => addCustomisedShape(canvas, "watchyouforeverface"),
-        //   icon: <LuEye />,
-        // },
+        {
+          title: "Cat Stare",
+          effect: () => addCustomisedShape(canvas, "catstare"),
+          icon: <LuEye />,
+        },
       ],
     },
     {
